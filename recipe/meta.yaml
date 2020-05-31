@@ -24,7 +24,7 @@ requirements:
   host:
     - libblas
     - liblapack
-    - libxc
+    - libxc <5.0
 
 test:
   commands:

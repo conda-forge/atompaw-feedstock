@@ -10,7 +10,7 @@ source:
   sha256: 42a46c0569367c0b971fbc3dcaf5eaec7020bdff111022b6f320de9f11c41c2c
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
@@ -24,6 +24,7 @@ requirements:
   host:
     - libblas
     - liblapack
+    - libxc <5.0
 
 test:
   commands:

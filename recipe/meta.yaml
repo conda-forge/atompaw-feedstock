@@ -1,5 +1,5 @@
 {% set name = "atompaw" %}
-{% set version = "4.2.0.4" %}
+{% set version = "4.2.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: http://users.wfu.edu/natalie/papers/pwpaw/{{ name }}-{{ version }}.tar.gz
-  sha256: 09a7976f79b8a27b9a9618ddffb7efa132cdc46cbae428c053c1089817c35c73
+  sha256: 45c66e02629252ba1065aa245a277af9528ed5d560c2f11979452a7ec6e99ac8
 
 build:
   number: 0

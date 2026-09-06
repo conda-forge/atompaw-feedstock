@@ -1,0 +1,52 @@
+schema_version: 1
+
+context:
+  name: atompaw
+  version: "4.2.0.5"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: http://users.wfu.edu/natalie/papers/pwpaw/${{ name }}-${{ version }}.tar.gz
+  sha256: 45c66e02629252ba1065aa245a277af9528ed5d560c2f11979452a7ec6e99ac8
+
+build:
+  number: 1
+  skip: not linux
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('fortran') }}
+    - make
+    - automake
+    - autoconf
+    - libtool
+  host:
+    - libblas
+    - liblapack
+    - libxc <5.0
+
+tests:
+  - script:
+      - atompaw --help
+
+about:
+  license: GPL-3.0-or-later
+  license_file: COPYING
+  summary: The software ATOMPAW generates projector and basis functions
+  description: |
+    The software ATOMPAW generates projector and basis functions which
+    are needed for performing electronic structure calculations
+    (Density-Functional Theory) based on the Projector Augmented Wave (PAW)
+    method.
+  homepage: http://users.wfu.edu/natalie/papers/pwpaw/man.html
+  repository: https://github.com/atompaw/atompaw
+  documentation: http://users.wfu.edu/natalie/papers/pwpaw/man.html
+
+extra:
+  recipe-maintainers:
+    - jan-janssen

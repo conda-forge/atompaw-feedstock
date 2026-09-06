@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: atompaw
-  version: "4.2.0.5"
+  version: "4.2.0.6"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: http://users.wfu.edu/natalie/papers/pwpaw/${{ name }}-${{ version }}.tar.gz
-  sha256: 45c66e02629252ba1065aa245a277af9528ed5d560c2f11979452a7ec6e99ac8
+  sha256: 20dee459f96b06fa6cc1cacd1dad640b841203eda45fe0d9410fa8d70a5052b1
 
 build:
-  number: 1
+  number: 0
   skip: not linux
 
 requirements:
